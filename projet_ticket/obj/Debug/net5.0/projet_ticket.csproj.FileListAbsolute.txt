@@ -1,0 +1,15 @@
+/Users/thomas_mary/Desktop/Cours/Prog/cash_ticket/projet_ticket/projet_ticket/bin/Debug/net5.0/projet_ticket.deps.json
+/Users/thomas_mary/Desktop/Cours/Prog/cash_ticket/projet_ticket/projet_ticket/bin/Debug/net5.0/projet_ticket.runtimeconfig.json
+/Users/thomas_mary/Desktop/Cours/Prog/cash_ticket/projet_ticket/projet_ticket/bin/Debug/net5.0/projet_ticket.runtimeconfig.dev.json
+/Users/thomas_mary/Desktop/Cours/Prog/cash_ticket/projet_ticket/projet_ticket/bin/Debug/net5.0/projet_ticket.dll
+/Users/thomas_mary/Desktop/Cours/Prog/cash_ticket/projet_ticket/projet_ticket/bin/Debug/net5.0/ref/projet_ticket.dll
+/Users/thomas_mary/Desktop/Cours/Prog/cash_ticket/projet_ticket/projet_ticket/bin/Debug/net5.0/projet_ticket.pdb
+/Users/thomas_mary/Desktop/Cours/Prog/cash_ticket/projet_ticket/projet_ticket/obj/Debug/net5.0/projet_ticket.csproj.AssemblyReference.cache
+/Users/thomas_mary/Desktop/Cours/Prog/cash_ticket/projet_ticket/projet_ticket/obj/Debug/net5.0/projet_ticket.GeneratedMSBuildEditorConfig.editorconfig
+/Users/thomas_mary/Desktop/Cours/Prog/cash_ticket/projet_ticket/projet_ticket/obj/Debug/net5.0/projet_ticket.AssemblyInfoInputs.cache
+/Users/thomas_mary/Desktop/Cours/Prog/cash_ticket/projet_ticket/projet_ticket/obj/Debug/net5.0/projet_ticket.AssemblyInfo.cs
+/Users/thomas_mary/Desktop/Cours/Prog/cash_ticket/projet_ticket/projet_ticket/obj/Debug/net5.0/projet_ticket.csproj.CoreCompileInputs.cache
+/Users/thomas_mary/Desktop/Cours/Prog/cash_ticket/projet_ticket/projet_ticket/obj/Debug/net5.0/projet_ticket.dll
+/Users/thomas_mary/Desktop/Cours/Prog/cash_ticket/projet_ticket/projet_ticket/obj/Debug/net5.0/ref/projet_ticket.dll
+/Users/thomas_mary/Desktop/Cours/Prog/cash_ticket/projet_ticket/projet_ticket/obj/Debug/net5.0/projet_ticket.pdb
+/Users/thomas_mary/Desktop/Cours/Prog/cash_ticket/projet_ticket/projet_ticket/obj/Debug/net5.0/projet_ticket.genruntimeconfig.cache
