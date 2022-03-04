@@ -1,22 +1,27 @@
 ﻿<Properties StartupConfiguration="{E203A0EB-6A66-4D1A-BFFD-AD580B355463}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="projet_ticket/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="projet_ticket/Ligne.cs">
     <Files>
-      <File FileName="projet_ticket/Program.cs" Line="1" Column="1" />
+      <File FileName="projet_ticket/Program.cs" Line="96" Column="32" />
+      <File FileName="projet_ticket/Article.cs" Line="1" Column="1" />
+      <File FileName="projet_ticket/Ligne.cs" Line="1" Column="1" NotebookId="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="projet_ticket" expanded="True">
             <Node name="projet_ticket" expanded="True">
-              <Node name="Program.cs" selected="True" />
+              <Node name="Ligne.cs" selected="True" />
             </Node>
           </Node>
         </State>
       </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.projet__ticket FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.projet__ticket PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
