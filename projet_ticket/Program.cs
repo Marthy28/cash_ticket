@@ -91,31 +91,44 @@ namespace projet_ticket
 
         }
 
-        static void reductionNotReduction(int total, float reduction)
+        static void reductionNotReduction(int total)
         {
+            Ligne line = new Ligne();
+            line.totalHT = total;
+            int reduction;
+
+switch (total)
+            {
+                case var expression when total is < 5000 and >= 1000:
+                    reduction = 3;
+                    break;
+                case var expression when total is < 7000 and >= 5000:
+                    reduction = 5;
+                    break;
+                case var expression when total is < 15000 and >= 7000:
+                    reduction = 7;
+                    break;
+                case var expression when total is < 15000 and >= 10000:
+                    reduction = 10;
+                    break;
+                case var expression when total is >= 15000:
+                    reduction = 15;
+                    break;
+                default:
+                    reduction = 0;
+                    break;
+            }
+            Console.WriteLine("Entrez TVA :");
+            //string tva = Console.In.ReadLine();
+            //line.tauxTVA = int.Parse(tva);
+            //
+            //float totalTTC = total + total * (float.Parse(tva) / 100);
+            //float totalReduit = totalTTC - totalTTC * (reduction / 100);
             float totalReduit = total - total * (reduction / 100);
+           
+
             Console.WriteLine($"Montant pré réduction : {total}");
             Console.WriteLine($"Montant avec réduction : {totalReduit}");
-        }
-
-        static void AddArticle()
-        {
-            Console.WriteLine("------- Ajouter des articles ------");
-            Console.WriteLine("Le prix : ");
-            string price = Console.In.ReadLine();
-            while (!int.TryParse(price, out int priceInt))
-            {
-                Console.WriteLine("Saisissez un entier:");
-                price = Console.In.ReadLine();
-            }
-
-            Console.WriteLine("La quantité : ");
-            string quantitity = Console.In.ReadLine();
-            if (!int.TryParse(quantitity, out int quantityInt))
-            {
-                Console.WriteLine("Saisissez un entier : ");
-                quantitity = Console.In.ReadLine();
-            }
         }
     }
 }
