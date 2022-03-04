@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace projet_ticket
 {
@@ -28,7 +30,7 @@ namespace projet_ticket
                     codeTVA();
                     break;
                 case "3":
-                    saisiePrix();
+                    CreationTicket();
                     break;
 
             }
@@ -57,47 +59,11 @@ namespace projet_ticket
             Console.WriteLine("TP - 2,1%");
         }
 
-        static public void saisiePrix()
+        static float calculReduction(float total)
         {
+            float reduction;
 
-            bool success = false;
-            string price = string.Empty;
-            string quantitity = string.Empty;
-            int priceInt = 0;
-            int quantityInt = 0;
-
-            while (success == false)
-            {
-                Console.WriteLine("------- Ajouter un prix ------");
-                Console.WriteLine("Le prix : ");
-                price = Console.In.ReadLine();
-                if (!int.TryParse(price, out priceInt))
-                {
-                    Console.WriteLine("Saisissez un entier");
-                }
-                else
-                {
-                    Console.WriteLine("La quantité : ");
-                    quantitity = Console.In.ReadLine();
-                    if (!int.TryParse(quantitity, out quantityInt))
-                    {
-                        Console.WriteLine("Saisissez un entier");
-                    }
-                    success = true;
-                }
-            }
-
-            Console.WriteLine($"total = {priceInt * quantityInt}");
-
-        }
-
-        static void reductionNotReduction(int total)
-        {
-            Ligne line = new Ligne();
-            line.totalHT = total;
-            int reduction;
-
-switch (total)
+            switch (total)
             {
                 case var expression when total is < 5000 and >= 1000:
                     reduction = 3;
@@ -118,17 +84,79 @@ switch (total)
                     reduction = 0;
                     break;
             }
-            Console.WriteLine("Entrez TVA :");
+            //Console.WriteLine("Entrez TVA :");
             //string tva = Console.In.ReadLine();
             //line.tauxTVA = int.Parse(tva);
             //
             //float totalTTC = total + total * (float.Parse(tva) / 100);
             //float totalReduit = totalTTC - totalTTC * (reduction / 100);
             float totalReduit = total - total * (reduction / 100);
-           
 
-            Console.WriteLine($"Montant pré réduction : {total}");
-            Console.WriteLine($"Montant avec réduction : {totalReduit}");
+            return totalReduit;
+
+        }
+        static Ligne AddArticle()
+        {
+            Console.WriteLine("------- Ajouter des articles ------");
+            Console.WriteLine("Le prix : ");
+            int priceInt;
+            int quantityInt;
+
+            string price = Console.In.ReadLine();
+            while (!int.TryParse(price, out priceInt))
+            {
+                Console.WriteLine("Saisissez un entier : ");
+                price = Console.In.ReadLine();
+            }
+            
+            Console.WriteLine("La quantité : ");
+
+            string quantitity = Console.In.ReadLine();
+            if (!int.TryParse(quantitity, out quantityInt))
+            {
+                Console.WriteLine("Saisissez un entier : ");
+                quantitity = Console.In.ReadLine();
+            }
+
+            var article = new Article();
+            article.Price = priceInt;
+
+            var ligne = new Ligne();
+            ligne.article = article;
+            ligne.quantite = quantityInt;
+            ligne.totalHT = priceInt * quantityInt;
+            return ligne;
+        }
+
+        public static void CreationTicket()
+        {
+            List<Ligne> lignes = new List<Ligne>();
+
+
+            string res = String.Empty;
+            while (res != "N")
+            {
+                res = string.Empty;
+                var ligne = AddArticle();
+                lignes.Add(ligne);
+
+                while (!(res == "Y" || res == "N"))
+                {
+                    Console.WriteLine("Voulez vous saisir un autre article ? (Y-N)");
+                    res = Console.In.ReadLine().ToUpper();
+                }
+            }
+            float total = 0;
+            foreach (Ligne line in lignes)
+            {
+                Console.WriteLine($"Montant HT : {line.totalHT}");
+                Console.WriteLine($"Montant TTC : {line.totalHT}");
+
+                total += line.totalHT;
+            }
+
+            Console.WriteLine($"Total :{calculReduction(total)}");
+
         }
     }
 }
