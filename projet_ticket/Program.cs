@@ -97,6 +97,26 @@ namespace projet_ticket
             Console.WriteLine($"Montant pré réduction : {total}");
             Console.WriteLine($"Montant avec réduction : {totalReduit}");
         }
+
+        static void AddArticle()
+        {
+            Console.WriteLine("------- Ajouter des articles ------");
+            Console.WriteLine("Le prix : ");
+            string price = Console.In.ReadLine();
+            while (!int.TryParse(price, out int priceInt))
+            {
+                Console.WriteLine("Saisissez un entier:");
+                price = Console.In.ReadLine();
+            }
+
+            Console.WriteLine("La quantité : ");
+            string quantitity = Console.In.ReadLine();
+            if (!int.TryParse(quantitity, out int quantityInt))
+            {
+                Console.WriteLine("Saisissez un entier : ");
+                quantitity = Console.In.ReadLine();
+            }
+        }
     }
 }
 
